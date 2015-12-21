@@ -1,0 +1,65 @@
+<idea-plugin version="1">
+    <id>com.coolsharp.codesection</id>
+    <name>CoolSharp Code Section Generator</name>
+    <version>1.1</version>
+    <vendor email="coolsharp@gmail.com" url="http://coolsharp.blogspot.kr">coolsharp</vendor>
+
+    <description>
+          <![CDATA[
+          This plugin is a section of code automatically makes the source code.<br>
+            // [final/static_property]====================[START]===================[final/static_property]<br>
+            // [final/static_property]=====================[END]====================[final/static_property]<br>
+            // [private/protected/public_property]========[START]=======[private/protected/public_property]<br>
+            // [private/protected/public_property]=========[END]========[private/protected/public_property]<br>
+            // [interface/enum/inner_class]===============[START]==============[interface/enum/inner_class]<br>
+            // [interface/enum/inner_class]================[END]===============[interface/enum/inner_class]<br>
+            // [inherited/listener_method]================[START]===============[inherited/listener_method]<br>
+            // [inherited/listener_method]=================[END]================[inherited/listener_method]<br>
+            // [life_cycle_method]========================[START]=======================[life_cycle_method]<br>
+            // [life_cycle_method]=========================[END]========================[life_cycle_method]<br>
+            // [private_method]===========================[START]==========================[private_method]<br>
+            // [private_method]============================[END]===========================[private_method]<br>
+            // [public_method]============================[START]===========================[public_method]<br>
+            // [public_method]=============================[END]============================[public_method]<br>
+            // [get/set]==================================[START]=================================[get/set]<br>
+            // [get/set]===================================[END]==================================[get/set]<br>
+          For more details, look at the repo on GitHub<br>
+          <a href=""></a>
+          ]]>
+    </description>
+
+    <change-notes>
+          <![CDATA[
+          Version 1.0
+          <ul>
+              <li>Initial release</li>
+          </ul>
+          ]]>
+    </change-notes>
+
+    <!-- 빌드번호 규칙 : http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html -->
+    <idea-version since-build="107.105"/>
+
+    <depends>com.intellij.modules.lang</depends>
+
+    <application-components>
+        <!-- Add your application components here -->
+    </application-components>
+
+    <project-components>
+        <!-- Add your project components here -->
+    </project-components>
+
+    <actions>
+        <action class="com.coolsharp.codesection.CodeSectionAction"
+                id="com.coolsharp.codesection.CodeSectionAction"
+                text="Code Section Generator"
+                description="Generates proper Android accessors">
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+</idea-plugin>
