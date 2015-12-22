@@ -76,7 +76,7 @@ public class CodeSectionAction extends AnAction {
      * @param comment
      */
     private void addComment(final PsiClass psiClass, PsiElementFactory elementFactory, String comment) {
-        psiClass.addBefore(elementFactory.createCommentFromText(comment, psiClass), psiClass.getOriginalElement());
+        psiClass.addBefore(elementFactory.createCommentFromText(comment, psiClass), psiClass.getFirstChild());
     }
 
     /**
@@ -106,7 +106,8 @@ public class CodeSectionAction extends AnAction {
             }
         }
         catch (IncorrectOperationException e) {
-
+        }
+        catch (Throwable throwable) {
         }
     }
 
