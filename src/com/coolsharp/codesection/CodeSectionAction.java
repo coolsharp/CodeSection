@@ -87,22 +87,22 @@ public class CodeSectionAction extends AnAction {
         try {
             PsiElementFactory elementFactory = JavaPsiFacade.getElementFactory(psiClass.getProject());
             if (null != elementFactory) {
-                addComment(psiClass, elementFactory, "// [final/static_property]====================[START]===================[final/static_property]");
-                addComment(psiClass, elementFactory, "// [final/static_property]=====================[END]====================[final/static_property]");
-                addComment(psiClass, elementFactory, "// [private/protected/public_property]========[START]=======[private/protected/public_property]");
-                addComment(psiClass, elementFactory, "// [private/protected/public_property]=========[END]========[private/protected/public_property]");
-                addComment(psiClass, elementFactory, "// [interface/enum/inner_class]===============[START]==============[interface/enum/inner_class]");
-                addComment(psiClass, elementFactory, "// [interface/enum/inner_class]================[END]===============[interface/enum/inner_class]");
-                addComment(psiClass, elementFactory, "// [inherited/listener_method]================[START]===============[inherited/listener_method]");
-                addComment(psiClass, elementFactory, "// [inherited/listener_method]=================[END]================[inherited/listener_method]");
-                addComment(psiClass, elementFactory, "// [life_cycle_method]========================[START]=======================[life_cycle_method]");
-                addComment(psiClass, elementFactory, "// [life_cycle_method]=========================[END]========================[life_cycle_method]");
-                addComment(psiClass, elementFactory, "// [private_method]===========================[START]==========================[private_method]");
-                addComment(psiClass, elementFactory, "// [private_method]============================[END]===========================[private_method]");
-                addComment(psiClass, elementFactory, "// [public_method]============================[START]===========================[public_method]");
-                addComment(psiClass, elementFactory, "// [public_method]=============================[END]============================[public_method]");
-                addComment(psiClass, elementFactory, "// [get/set]==================================[START]=================================[get/set]");
                 addComment(psiClass, elementFactory, "// [get/set]===================================[END]==================================[get/set]");
+                addComment(psiClass, elementFactory, "// [get/set]==================================[START]=================================[get/set]");
+                addComment(psiClass, elementFactory, "// [public_method]=============================[END]============================[public_method]");
+                addComment(psiClass, elementFactory, "// [public_method]============================[START]===========================[public_method]");
+                addComment(psiClass, elementFactory, "// [private_method]============================[END]===========================[private_method]");
+                addComment(psiClass, elementFactory, "// [private_method]===========================[START]==========================[private_method]");
+                addComment(psiClass, elementFactory, "// [life_cycle_method]=========================[END]========================[life_cycle_method]");
+                addComment(psiClass, elementFactory, "// [life_cycle_method]========================[START]=======================[life_cycle_method]");
+                addComment(psiClass, elementFactory, "// [inherited/listener_method]=================[END]================[inherited/listener_method]");
+                addComment(psiClass, elementFactory, "// [inherited/listener_method]================[START]===============[inherited/listener_method]");
+                addComment(psiClass, elementFactory, "// [interface/enum/inner_class]================[END]===============[interface/enum/inner_class]");
+                addComment(psiClass, elementFactory, "// [interface/enum/inner_class]===============[START]==============[interface/enum/inner_class]");
+                addComment(psiClass, elementFactory, "// [private/protected/public_property]=========[END]========[private/protected/public_property]");
+                addComment(psiClass, elementFactory, "// [private/protected/public_property]========[START]=======[private/protected/public_property]");
+                addComment(psiClass, elementFactory, "// [final/static_property]=====================[END]====================[final/static_property]");
+                addComment(psiClass, elementFactory, "// [final/static_property]====================[START]===================[final/static_property]");
             }
         }
         catch (IncorrectOperationException e) {
